@@ -17,6 +17,9 @@ function App() {
     //method2
     const response=await fetch("http://localhost:4000/api/v1/uploadhere",{
       method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
       body:formData
     })
     const data=response.json()
